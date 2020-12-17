@@ -2,7 +2,7 @@ import tkinter as tk
 
 # fonction:
 def addition():
-    pass
+    return
 
 
 # interface:
