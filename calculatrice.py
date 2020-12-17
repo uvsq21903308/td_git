@@ -2,7 +2,16 @@ import tkinter as tk
 
 # fonction:
 def addition():
+
     return
+
+def multiplication():
+
+
+def division():
+    
+
+def soustraction():
 
 
 # interface:
