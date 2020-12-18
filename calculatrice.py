@@ -6,20 +6,17 @@ HEIGHT, WIDTH = 4, 20
 liste = []
 
 # fonction:
-def addition():
-    label.config(text="+")
+def addition(): 
+    liste.clear()
 
 def multiplication():
-    label.config(text="*")
-
+    liste.clear()
 
 def division():
-    label.config(text="/")
-    
+    liste.clear()
 
 def soustraction():
-    label.config(text="-")
-
+    liste.clear()
 
 def calcul():
     
