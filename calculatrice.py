@@ -75,7 +75,7 @@ def nb9():
 
 # interface:
 racine =  tk.Tk()
-label = tk.Label(racine, bg="black", height=HEIGHT, width=WIDTH)
+label = tk.Label(racine, text=" ", bg="black", height=HEIGHT, width=WIDTH)
 label.grid(column=0, row=0, columnspan=4)
 
 #Pavé numérique:
