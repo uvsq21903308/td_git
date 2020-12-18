@@ -1,64 +1,67 @@
 import tkinter as tk
 
 # Varioables:
-HEIGHT, WIDTH = 4, 20
+HEIGHT, WIDTH = 100, 300
 # fonction:
 def addition():
-
-    return
+    res = x + y
+    label5.config(text=res)
 
 def multiplication():
-    pass
+    res = x * y
+    label.config(text=res)
 
 
 def division():
-    pass
+    res = x / y
+    label.config(text=res)
     
 
 def soustraction():
+    res = x - y
+    label.config(text=res)
+
+
+def nb1():
     pass
 
 
-def add1():
+def nb2():
     pass
 
 
-def add2():
+def nb3():
     pass
 
 
-def add3():
+def nb4():
     pass
 
 
-def add4():
+def nb5():
     pass
 
 
-def add5():
+def nb6():
     pass
 
 
-def add6():
+def nb7():
     pass
 
 
-def add7():
+def nb8():
     pass
 
 
-def add8():
-    pass
-
-
-def add9():
+def nb9():
     pass
 
 
 # interface:
 racine =  tk.Tk()
-label = tk.Label(racine, bg="black", height=HEIGHT, width=WIDTH)
-label.grid(column=0, row=0, columnspan=4)
+canvas = tk.Canvas(racine, bg="black", height=HEIGHT, width=WIDTH)
+canvas.grid(column=0, row=0, columnspan=4)
 
 #Pavé numérique:
 number1 = tk.Button(racine, text="1",font=("30"), command=add1)
@@ -82,7 +85,6 @@ number9.grid(column=2, row=3)
 
 # Opérations:
 plus = tk.Button(racine, text="+",font=("30"), command=addition)
-plus.grid()
 moins = tk.Button(racine, text="-",font=("30"), command=multiplication)
 diviser = tk.Button(racine, text="/",font=("30"), command=division)
 multiplication = tk.Button(racine, text="*",font=("30"), command=soustraction)
