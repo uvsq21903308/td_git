@@ -4,86 +4,123 @@ WIDTH = 20
 
 #liste
 liste = []
+lst_calcul = []
+operation= []
 
 # fonction:
-def addition(): 
+def addition():
+    c = "0"
+    for i in range(0,len(liste)):
+        c += str(liste[i])
+    lst_calcul.append(c)
     liste.clear()
+    label.config(text="")
+    operation.append(1)
 
 def multiplication():
+    c = "0"
+    for i in range(0,len(liste)):
+        c += str(liste[i])
+    lst_calcul.append(c)
     liste.clear()
+    label.config(text="")
+    operation.append(2)
 
 def division():
+    c = "0"
+    for i in range(0,len(liste)):
+        c += str(liste[i])
+    lst_calcul.append(c)
     liste.clear()
+    label.config(text="")
+    operation.append(3)
 
 def soustraction():
+    c = "0"
+    for i in range(0,len(liste)):
+        c += str(liste[i])
+    lst_calcul.append(c)
     liste.clear()
+    label.config(text="")
+    operation.append(4)
 
 def calcul():
-    pass
+    c = "0"
+    for i in range(0,len(liste)):
+        c += str(liste[i])
+    lst_calcul.append(c)
+    x = int(lst_calcul[0])
+    if 1 in operation:
+        x += int(lst_calcul[1])
+    if 2 in operation:
+        x *= int(lst_calcul[1])
+    if 3 in operation:
+        x /= int(lst_calcul[1])
+    if 4 in operation:
+        x -= int(lst_calcul[1])
+    label.config(text=x)
+    print(lst_calcul[0], lst_calcul[1])
 
+
+def affichage():
+    c = "0"
+    for i in range(0,len(liste)):
+        c += str(liste[i])
+    label.config(text=int(c))
 
 def nb0():
-    global a
-    a = 0
-    liste.append(a)
+    liste.append(0)
+    affichage()
+
 
 def nb1():
-    global a
-    a = 1
-    liste.append(a)
+    liste.append(1)
+    affichage()
 
 
 def nb2():
-    global a
-    a = 2
-    liste.append(a)
+    liste.append(2)
+    affichage()
 
 
 def nb3():
-    global a
-    a = 3
-    liste.append(a)
+    liste.append(3)
+    affichage()
 
 
 def nb4():
-    global a
-    a = 4
-    liste.append(a)
+    liste.append(4)
+    affichage()
 
 
 def nb5():
-    global a
-    a = 5
-    liste.append(a)
+    liste.append(5)
+    affichage()
 
 
 def nb6():
-    global a
-    a = 6
-    liste.append(a)
+    liste.append(6)
+    affichage()
 
 
 def nb7():
-    global a
-    a = 7
-    liste.append(a)
+    liste.append(7)
+    affichage()
 
 
 def nb8():
-    global a
-    a = 8
-    liste.append(a)
+    liste.append(8)
+    affichage()
 
 
 def nb9():
-    global a
-    a = 9
-    liste.append(a)
+    liste.append(9)
+    affichage()
 
 
 # interface:
 racine =  tk.Tk()
-label = tk.Label(racine, bg="black", height=HEIGHT, width=WIDTH)
+label = tk.Label(racine, text="", fg="white", bg="black", width=WIDTH)
 label.grid(column=0, row=0, columnspan=4)
 
 #Pavé numérique:
@@ -113,21 +150,13 @@ egal = tk.Button(racine, text="=", font=("30"), command=calcul)
 egal.grid(column=3, row=1)
 plus = tk.Button(racine, text="+",font=("30"), command=addition)
 plus.grid(column=3, row=2)
-moins = tk.Button(racine, text="-",font=("30"), command=multiplication)
+moins = tk.Button(racine, text="-",font=("30"), command=soustraction)
 moins.grid(column=3, row=3)
-multiplication = tk.Button(racine, text="x",font=("30"), command=soustraction)
+multiplication = tk.Button(racine, text="x",font=("30"), command=multiplication)
 multiplication.grid(column=3, row=4)
 diviser = tk.Button(racine, text="/",font=("30"), command=division)
 diviser.grid(column=2, row=4)
 
+
 # mainloop.
 racine.mainloop()
-
-liste = [9, 3, 4, 5]
-c = "0"
-for i in range(0,len(liste)):
-    c += str(liste[i])
-d = int(c)
-print(d)
-e = 10 + d
-print(e)
