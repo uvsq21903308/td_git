@@ -64,8 +64,8 @@ def nb9():
 
 # interface:
 racine =  tk.Tk()
-canvas = tk.Canvas(racine, bg="black", height=HEIGHT, width=WIDTH)
-canvas.grid(column=0, row=0, columnspan=4)
+label = tk.label(racine, bg="black", height=HEIGHT, width=WIDTH)
+label.grid(column=0, row=0, columnspan=4)
 
 #Pavé numérique:
 number1 = tk.Button(racine, text="1",font=("30"), command=add1)
