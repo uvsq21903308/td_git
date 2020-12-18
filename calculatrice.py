@@ -18,6 +18,10 @@ def soustraction():
     label.config(text=" - ")
 
 
+def calcul():
+    pass
+
+
 def nb0():
     global a
     a = 0
@@ -75,6 +79,8 @@ label = tk.Label(racine, bg="black", height=HEIGHT, width=WIDTH)
 label.grid(column=0, row=0, columnspan=4)
 
 #Pavé numérique:
+number0 = tk.Button(racine, text="0", font=("30"), command=nb0)
+number0.grid(column=1, row=4)
 number1 = tk.Button(racine, text="1",font=("30"), command=nb1)
 number1.grid(column=0, row=1)
 number2 = tk.Button(racine, text="2",font=("30"), command=nb2)
@@ -95,13 +101,16 @@ number9 = tk.Button(racine, text="9",font=("30"), command=nb9)
 number9.grid(column=2, row=3)
 
 # Opérations:
+egal = tk.Button(racine, text="=", font=("30"), command=calcul)
+egal.grid(column=3, row=1)
 plus = tk.Button(racine, text="+",font=("30"), command=addition)
+plus.grid(column=3, row=2)
 moins = tk.Button(racine, text="-",font=("30"), command=multiplication)
-moins.grid(column=3, row=2)
+moins.grid(column=3, row=3)
 multiplication = tk.Button(racine, text="x",font=("30"), command=soustraction)
-multiplication.grid(column=3, row=3)
+multiplication.grid(column=3, row=4)
 diviser = tk.Button(racine, text="/",font=("30"), command=division)
-diviser.grid(column=3, row=4)
+diviser.grid(column=2, row=4)
 
 # mainloop.
 racine.mainloop()
