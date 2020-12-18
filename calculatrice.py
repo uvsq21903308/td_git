@@ -2,80 +2,91 @@ import tkinter as tk
 
 HEIGHT, WIDTH = 4, 20
 
+#liste
+liste = []
+
 # fonction:
 def addition():
-    label.config(text=" + ")
+    label.config(text="+")
 
 def multiplication():
-    label.config(text=" * ")
+    label.config(text="*")
 
 
 def division():
-    label.config(text=" / ")
+    label.config(text="/")
     
 
 def soustraction():
-    label.config(text=" - ")
+    label.config(text="-")
 
 
 def calcul():
-    pass
+    
 
 
 def nb0():
     global a
     a = 0
-    label.config(text=a)
-    liste
+    liste.append(a)
 
 def nb1():
+    global a
     a = 1
-    label.config(text=a)
+    liste.append(a)
 
 
 def nb2():
+    global a
     a = 2
-    label.config(text=a)
+    liste.append(a)
 
 
 def nb3():
+    global a
     a = 3
-    label.config(text=3)
+    liste.append(a)
 
 
 def nb4():
+    global a
     a = 4
-    label.config(text=4)
+    liste.append(a)
 
 
 def nb5():
+    global a
     a = 5
-    label.config(text=5)
+    liste.append(a)
 
 
 def nb6():
+    global a
     a = 6
-    label.config(text=6)
+    liste.append(a)
 
 
 def nb7():
+    global a
     a = 7
-    label.config(text=7)
+    liste.append(a)
 
 
 def nb8():
+    global a
     a = 8
-    label.config(text=8)
+    liste.append(a)
 
 
 def nb9():
+    global a
     a = 9
-    label.config(text=9)
+    liste.append(a)
 
 
 # interface:
 racine =  tk.Tk()
-label = tk.Label(racine, text=" ", fg="white", bg="black", height=HEIGHT, width=WIDTH)
+label = tk.Label(racine, bg="black", height=HEIGHT, width=WIDTH)
 label.grid(column=0, row=0, columnspan=4)
 
 #Pavé numérique:
