@@ -2,6 +2,7 @@ import tkinter as tk
 
 # Varioables:
 HEIGHT, WIDTH = 4, 20
+
 # fonction:
 def addition():
 
@@ -82,9 +83,13 @@ number9.grid(column=2, row=3)
 
 # Opérations:
 plus = tk.Button(racine, text="+",font=("30"), command=addition)
-plus.grid()
+plus.grid(column=3, row=1)
 moins = tk.Button(racine, text="-",font=("30"), command=multiplication)
-diviser = tk.Button(racine, text="/",font=("30"), command=division)
+moins.grid(column=3, row=2)
 multiplication = tk.Button(racine, text="*",font=("30"), command=soustraction)
+multiplication.grid(column=3, row=3)
+diviser = tk.Button(racine, text="/",font=("30"), command=division)
+diviser.grid(column=3, row=4)
+
 # mainloop.
 racine.mainloop()
