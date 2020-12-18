@@ -1,6 +1,6 @@
 import tkinter as tk
 
-HEIGHT, WIDTH = 4, 20
+WIDTH = 20
 
 #liste
 liste = []
@@ -19,7 +19,7 @@ def soustraction():
     liste.clear()
 
 def calcul():
-    
+    pass
 
 
 def nb0():
@@ -122,3 +122,12 @@ diviser.grid(column=2, row=4)
 
 # mainloop.
 racine.mainloop()
+
+liste = [9, 3, 4, 5]
+c = "0"
+for i in range(0,len(liste)):
+    c += str(liste[i])
+d = int(c)
+print(d)
+e = 10 + d
+print(e)
