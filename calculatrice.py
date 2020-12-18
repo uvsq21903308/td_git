@@ -4,62 +4,69 @@ HEIGHT, WIDTH = 4, 20
 
 # fonction:
 def addition():
-    res = x + y
-    label.config(text=res)
+    label.config(text=" + ")
 
 def multiplication():
-    res = x * y
-    label.config(text=res)
+    label.config(text=" * ")
 
 
 def division():
-    res = x / y
-    label.config(text=res)
+    label.config(text=" / ")
     
 
 def soustraction():
-    res = x - y
-    label.config(text=res)
-
-def nb_x():
+    label.config(text=" - ")
 
 
+def nb0():
+    global a
+    a = 0
+    label.config(text=a)
+    liste.
 
 def nb1():
-    
-    label.config(text=1)
+    a = 1
+    label.config(text=a)
 
 
 def nb2():
-    label.config(text=2)
+    a = 2
+    label.config(text=a)
 
 
 def nb3():
+    a = 3
     label.config(text=3)
 
 
 def nb4():
+    a = 4
     label.config(text=4)
 
 
 def nb5():
-    label.config(text=1)
+    a = 5
+    label.config(text=5)
 
 
 def nb6():
-    label.config(text=1)
+    a = 6
+    label.config(text=6)
 
 
 def nb7():
-    pass
+    a = 7
+    label.config(text=7)
 
 
 def nb8():
-    pass
+    a = 8
+    label.config(text=8)
 
 
 def nb9():
-    pass
+    a = 9
+    label.config(text=9)
 
 
 # interface:
