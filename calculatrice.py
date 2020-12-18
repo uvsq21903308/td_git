@@ -22,7 +22,7 @@ def soustraction():
     label.config(text=res)
 
 def nb_x():
-    
+
 
 
 def nb1():
@@ -31,15 +31,15 @@ def nb1():
 
 
 def nb2():
-    label.config(text=1)
+    label.config(text=2)
 
 
 def nb3():
-    label.config(text=1)
+    label.config(text=3)
 
 
 def nb4():
-    label.config(text=1)
+    label.config(text=4)
 
 
 def nb5():
@@ -64,8 +64,8 @@ def nb9():
 
 # interface:
 racine =  tk.Tk()
-label = tk.label(racine, bg="black", height=HEIGHT, width=WIDTH)
-label.grid(column=0, row=0, columnspan=4)
+canvas = tk.Canvas(racine, bg="black", height=HEIGHT, width=WIDTH)
+canvas.grid(column=0, row=0, columnspan=4)
 
 #Pavé numérique:
 number1 = tk.Button(racine, text="1",font=("30"), command=add1)
