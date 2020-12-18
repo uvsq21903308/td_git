@@ -1,7 +1,7 @@
 import tkinter as tk
 
 # Varioables:
-HEIGHT, WIDTH = 100, 300
+HEIGHT, WIDTH = 4, 20
 # fonction:
 def addition():
 
@@ -57,8 +57,8 @@ def add9():
 
 # interface:
 racine =  tk.Tk()
-canvas = tk.Canvas(racine, bg="black", height=HEIGHT, width=WIDTH)
-canvas.grid(column=0, row=0, columnspan=4)
+label = tk.Label(racine, bg="black", height=HEIGHT, width=WIDTH)
+label.grid(column=0, row=0, columnspan=4)
 
 #Pavé numérique:
 number1 = tk.Button(racine, text="1",font=("30"), command=add1)
@@ -82,6 +82,7 @@ number9.grid(column=2, row=3)
 
 # Opérations:
 plus = tk.Button(racine, text="+",font=("30"), command=addition)
+plus.grid()
 moins = tk.Button(racine, text="-",font=("30"), command=multiplication)
 diviser = tk.Button(racine, text="/",font=("30"), command=division)
 multiplication = tk.Button(racine, text="*",font=("30"), command=soustraction)
