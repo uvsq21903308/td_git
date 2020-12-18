@@ -22,7 +22,7 @@ def nb0():
     global a
     a = 0
     label.config(text=a)
-    liste.
+    liste
 
 def nb1():
     a = 1
