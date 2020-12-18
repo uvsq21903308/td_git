@@ -1,7 +1,7 @@
 import tkinter as tk
 
-# Varioables:
-HEIGHT, WIDTH = 100, 300
+HEIGHT, WIDTH = 4, 20
+
 # fonction:
 def addition():
     res = x + y
@@ -23,7 +23,8 @@ def soustraction():
 
 
 def nb1():
-    pass
+    
+    label.config(text=1)
 
 
 def nb2():
@@ -86,7 +87,11 @@ number9.grid(column=2, row=3)
 # Opérations:
 plus = tk.Button(racine, text="+",font=("30"), command=addition)
 moins = tk.Button(racine, text="-",font=("30"), command=multiplication)
-diviser = tk.Button(racine, text="/",font=("30"), command=division)
+moins.grid(column=3, row=2)
 multiplication = tk.Button(racine, text="*",font=("30"), command=soustraction)
+multiplication.grid(column=3, row=3)
+diviser = tk.Button(racine, text="/",font=("30"), command=division)
+diviser.grid(column=3, row=4)
+
 # mainloop.
 racine.mainloop()
