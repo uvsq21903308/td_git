@@ -1,6 +1,6 @@
 import tkinter as tk
 
-WIDTH = 20
+HEIGHT, WIDTH = 4, 40
 
 # liste
 liste = []
@@ -64,7 +64,6 @@ def calcul():
         c += str(liste[i])
     c = int(c)
     lst_calcul.append(c)
-    print(lst_calcul)
     liste_cpt = []
     cpt = 0
     res = lst_calcul[0]
@@ -160,42 +159,42 @@ def nb9():
 
 # interface:
 racine = tk.Tk()
-label = tk.Label(racine, text="", fg="white", bg="black", width=WIDTH)
-label.grid(column=0, row=0, columnspan=4)
+label = tk.Label(racine, text="", fg="white", bg="black", width=WIDTH, height=HEIGHT, anchor='e', font=("30"))
+label.grid(column=0, row=0, columnspan=8)
 
 # Pavé numérique:
-number0 = tk.Button(racine, text="0", font=("30"), command=nb0)
-number0.grid(column=1, row=4)
-number1 = tk.Button(racine, text="1", font=("30"), command=nb1)
-number1.grid(column=0, row=1)
-number2 = tk.Button(racine, text="2", font=("30"), command=nb2)
-number2.grid(column=1, row=1)
-number3 = tk.Button(racine, text="3", font=("30"), command=nb3)
-number3.grid(column=2, row=1)
-number4 = tk.Button(racine, text="4", font=("30"), command=nb4)
-number4.grid(column=0, row=2)
-number5 = tk.Button(racine, text="5", font=("30"), command=nb5)
-number5.grid(column=1, row=2)
-number6 = tk.Button(racine, text="6", font=("30"), command=nb6)
-number6.grid(column=2, row=2)
-number7 = tk.Button(racine, text="7", font=("30"), command=nb7)
-number7.grid(column=0, row=3)
-number8 = tk.Button(racine, text="8", font=("30"), command=nb8)
-number8.grid(column=1, row=3)
-number9 = tk.Button(racine, text="9", font=("30"), command=nb9)
-number9.grid(column=2, row=3)
+number0 = tk.Button(racine, text="0", font=("50"), command=nb0, padx=70)
+number0.grid(column=0, row=8, columnspan=4, rowspan=2)
+number1 = tk.Button(racine, text="1", font=("30"), command=nb1, padx=23.5)
+number1.grid(column=0, row=1, columnspan=2, rowspan=2)
+number2 = tk.Button(racine, text="2", font=("50"), command=nb2, padx=23.5)
+number2.grid(column=2, row=1, columnspan=2, rowspan=2)
+number3 = tk.Button(racine, text="3", font=("30"), command=nb3, padx=23.5)
+number3.grid(column=4, row=1, columnspan=2, rowspan=2)
+number4 = tk.Button(racine, text="4", font=("30"), command=nb4, padx=23.5)
+number4.grid(column=0, row=4, columnspan=2, rowspan=2)
+number5 = tk.Button(racine, text="5", font=("30"), command=nb5, padx=23.5)
+number5.grid(column=2, row=4, columnspan=2, rowspan=2)
+number6 = tk.Button(racine, text="6", font=("30"), command=nb6, padx=23.5)
+number6.grid(column=4, row=4, columnspan=2, rowspan=2)
+number7 = tk.Button(racine, text="7", font=("30"), command=nb7, padx=23.5)
+number7.grid(column=0, row=6, columnspan=2, rowspan=2)
+number8 = tk.Button(racine, text="8", font=("30"), command=nb8, padx=23.5)
+number8.grid(column=2, row=6, columnspan=2, rowspan=2)
+number9 = tk.Button(racine, text="9", font=("30"), command=nb9, padx=23.5)
+number9.grid(column=4, row=6, columnspan=2, rowspan=2)
 
 # Opérations:
-egal = tk.Button(racine, text="=", font=("30"), command=calcul)
-egal.grid(column=3, row=1)
-plus = tk.Button(racine, text="+", font=("30"), command=addition)
-plus.grid(column=3, row=2)
-moins = tk.Button(racine, text="-", font=("30"), command=soustraction)
-moins.grid(column=3, row=3)
-multiplication = tk.Button(racine, text="x", font=("30"), command=multiplication)
-multiplication.grid(column=3, row=4)
-diviser = tk.Button(racine, text="/", font=("30"), command=division)
-diviser.grid(column=2, row=4)
+egal = tk.Button(racine, text="=", font=("30"), command=calcul, padx=23.5)
+egal.grid(column=6, row=1, columnspan=4, rowspan=2)
+plus = tk.Button(racine, text="+", font=("30"), command=addition, padx=23.5)
+plus.grid(column=6, row=4, columnspan=2, rowspan=2)
+moins = tk.Button(racine, text="-", font=("30"), command=soustraction, padx=23.5)
+moins.grid(column=6, row=6, columnspan=2, rowspan=2)
+multiplication = tk.Button(racine, text="x", font=("30"), command=multiplication, padx=23.5)
+multiplication.grid(column=6, row=8, columnspan=2, rowspan=2)
+diviser = tk.Button(racine, text="/", font=("30"), command=division, padx=25)
+diviser.grid(column=4, row=8, columnspan=2, rowspan=2)
 
 
 # mainloop.
