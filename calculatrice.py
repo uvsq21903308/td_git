@@ -11,11 +11,19 @@ test_flo = []
 # fonction:
 
 
-def addition():
-    c = "0"
-    for i in range(len(liste)):
-        c += str(liste[i])
-    c = int(c)
+def addition(event):
+    if 1 in test_flo:
+        c = "0"
+        for i in range(len(liste)):
+            c += str(liste[i])
+        c = float(c)
+        label.config(text=c)
+    else:
+        c = "0"
+        for i in range(len(liste)):
+            c += str(liste[i])
+        c = int(c)
+        label.config(text=c)
     lst_calcul.append(c)
     lst_calcul.append("+")
     liste.clear()
@@ -23,11 +31,19 @@ def addition():
     operation.append(1)
 
 
-def multiplication():
-    c = "0"
-    for i in range(len(liste)):
-        c += str(liste[i])
-    c = int(c)
+def multiplication(event):
+    if 1 in test_flo:
+        c = "0"
+        for i in range(len(liste)):
+            c += str(liste[i])
+        c = float(c)
+        label.config(text=c)
+    else:
+        c = "0"
+        for i in range(len(liste)):
+            c += str(liste[i])
+        c = int(c)
+        label.config(text=c)
     lst_calcul.append(c)
     lst_calcul.append("*")
     liste.clear()
@@ -35,11 +51,19 @@ def multiplication():
     operation.append(2)
 
 
-def division():
-    c = "0"
-    for i in range(len(liste)):
-        c += str(liste[i])
-    c = int(c)
+def division(event):
+    if 1 in test_flo:
+        c = "0"
+        for i in range(len(liste)):
+            c += str(liste[i])
+        c = float(c)
+        label.config(text=c)
+    else:
+        c = "0"
+        for i in range(len(liste)):
+            c += str(liste[i])
+        c = int(c)
+        label.config(text=c)
     lst_calcul.append(c)
     lst_calcul.append("/")
     liste.clear()
@@ -47,11 +71,19 @@ def division():
     operation.append(3)
 
 
-def soustraction():
-    c = "0"
-    for i in range(len(liste)):
-        c += str(liste[i])
-    c = int(c)
+def soustraction(event):
+    if 1 in test_flo:
+        c = "0"
+        for i in range(len(liste)):
+            c += str(liste[i])
+        c = float(c)
+        label.config(text=c)
+    else:
+        c = "0"
+        for i in range(len(liste)):
+            c += str(liste[i])
+        c = int(c)
+        label.config(text=c)
     lst_calcul.append(c)
     lst_calcul.append("-")
     liste.clear()
@@ -59,11 +91,19 @@ def soustraction():
     operation.append(4)
 
 
-def calcul():
-    c = "0"
-    for i in range(len(liste)):
-        c += str(liste[i])
-    c = int(c)
+def calcul(event):
+    if 1 in test_flo:
+        c = "0"
+        for i in range(len(liste)):
+            c += str(liste[i])
+        c = float(c)
+        label.config(text=c)
+    else:
+        c = "0"
+        for i in range(len(liste)):
+            c += str(liste[i])
+        c = int(c)
+        label.config(text=c)
     lst_calcul.append(c)
     liste_cpt = []
     cpt = 0
@@ -101,67 +141,80 @@ def calcul():
     label.config(text=res)
 
 
-def nbrFlotant():
+def nbrFlotant(event):
     test_flo.append(1)
+    liste.append(".")
 
 
 def cancel():
-    pass
+    label.config(text="")
+    liste.clear()
+    lst_calcul.clear()
+    operation.clear()
+    test_flo.clear()
 
 
 def affichage():
-    c = "0"
-    for i in range(len(liste)):
-        c += str(liste[i])
-    label.config(text=int(c))
+    if 1 in test_flo:
+        c = "0"
+        for i in range(len(liste)):
+            c += str(liste[i])
+        c = float(c)
+        label.config(text=c)
+    else:
+        c = "0"
+        for i in range(len(liste)):
+            c += str(liste[i])
+        c = int(c)
+        label.config(text=c)
 
 
-def nb0():
+def nb0(event):
     liste.append(0)
     affichage()
 
 
-def nb1():
+def nb1(event):
     liste.append(1)
     affichage()
 
 
-def nb2():
+def nb2(event):
     liste.append(2)
     affichage()
 
 
-def nb3():
+def nb3(event):
     liste.append(3)
     affichage()
 
 
-def nb4():
+def nb4(event):
     liste.append(4)
     affichage()
 
 
-def nb5():
+def nb5(event):
     liste.append(5)
     affichage()
 
 
-def nb6():
+def nb6(event):
     liste.append(6)
     affichage()
 
 
-def nb7():
+def nb7(event):
     liste.append(7)
     affichage()
 
 
-def nb8():
+def nb8(event):
     liste.append(8)
     affichage()
 
 
-def nb9():
+def nb9(event):
     liste.append(9)
     affichage()
 
@@ -172,42 +225,59 @@ label = tk.Label(racine, text="", fg="white", bg="black", width=WIDTH, height=HE
 label.grid(column=0, row=0, columnspan=8)
 
 # Pavé numérique:
-number0 = tk.Button(racine, text="0", font=("50"), command=nb0, padx=70)
-number0.grid(column=0, row=5, columnspan=4)
-number1 = tk.Button(racine, text="1", font=("30"), command=nb1, padx=23.5)
+number0 = tk.Button(racine, text="0", font=("50"), command=lambda: nb0(0), padx=23.5)
+number0.grid(column=0, row=5, columnspan=2)
+racine.bind('<KeyPress-0>', nb0)
+number1 = tk.Button(racine, text="1", font=("30"), command=lambda: nb1(1), padx=23.5)
 number1.grid(column=0, row=2, columnspan=2)
-number2 = tk.Button(racine, text="2", font=("50"), command=nb2, padx=23.5)
+racine.bind("<KeyPress-1>", nb1)
+number2 = tk.Button(racine, text="2", font=("50"), command=lambda: nb2(2), padx=23.5)
 number2.grid(column=2, row=2, columnspan=2)
-number3 = tk.Button(racine, text="3", font=("30"), command=nb3, padx=23.5)
+racine.bind("<KeyPress-2>", nb2)
+number3 = tk.Button(racine, text="3", font=("30"), command=lambda: nb3(3), padx=23.5)
 number3.grid(column=4, row=2, columnspan=2)
-number4 = tk.Button(racine, text="4", font=("30"), command=nb4, padx=23.5)
+racine.bind("<KeyPress-3>", nb3)
+number4 = tk.Button(racine, text="4", font=("30"), command=lambda: nb4(4), padx=23.5)
 number4.grid(column=0, row=3, columnspan=2)
-number5 = tk.Button(racine, text="5", font=("30"), command=nb5, padx=23.5)
+racine.bind("<KeyPress-4>", nb4)
+number5 = tk.Button(racine, text="5", font=("30"), command=lambda: nb5(5), padx=23.5)
 number5.grid(column=2, row=3, columnspan=2)
-number6 = tk.Button(racine, text="6", font=("30"), command=nb6, padx=23.5)
+racine.bind("<KeyPress-5>", nb5)
+number6 = tk.Button(racine, text="6", font=("30"), command=lambda: nb6(6), padx=23.5)
 number6.grid(column=4, row=3, columnspan=2)
-number7 = tk.Button(racine, text="7", font=("30"), command=nb7, padx=23.5)
+racine.bind("<KeyPress-6>", nb6)
+number7 = tk.Button(racine, text="7", font=("30"), command=lambda: nb7(7), padx=23.5)
 number7.grid(column=0, row=4, columnspan=2)
-number8 = tk.Button(racine, text="8", font=("30"), command=nb8, padx=23.5)
+racine.bind("<KeyPress-7>", nb7)
+number8 = tk.Button(racine, text="8", font=("30"), command=lambda: nb8(8), padx=23.5)
 number8.grid(column=2, row=4, columnspan=2)
-number9 = tk.Button(racine, text="9", font=("30"), command=nb9, padx=23.5)
+racine.bind("<KeyPress-8>", nb8)
+number9 = tk.Button(racine, text="9", font=("30"), command=lambda: nb9(9), padx=23.5)
 number9.grid(column=4, row=4, columnspan=2)
+racine.bind("<KeyPress-9>", nb9)
 
 # Opérations:
-egal = tk.Button(racine, text="=", font=("30"), command=calcul, padx=23.5)
+egal = tk.Button(racine, text="=", font=("30"), command=lambda: calcul("="), padx=23.5)
 egal.grid(column=6, row=2, columnspan=4)
-plus = tk.Button(racine, text="+", font=("30"), command=addition, padx=23.5)
+racine.bind('KeyPress-=', calcul)
+plus = tk.Button(racine, text="+", font=("30"), command=lambda: addition("+"), padx=23.5)
 plus.grid(column=6, row=3, columnspan=2)
-moins = tk.Button(racine, text="-", font=("30"), command=soustraction, padx=23.5)
+racine.bind('KeyPress-+', addition)
+moins = tk.Button(racine, text="-", font=("30"), command=lambda: soustraction("-"), padx=23.5)
 moins.grid(column=6, row=4, columnspan=2)
-multiplication = tk.Button(racine, text="x", font=("30"), command=multiplication, padx=23.5)
-multiplication.grid(column=6, row=5, columnspan=2)
-diviser = tk.Button(racine, text="/", font=("30"), command=division, padx=25)
+racine.bind('KeyPress--', soustraction)
+multiplications = tk.Button(racine, text="x", font=("30"), command=lambda: multiplication("*"), padx=23.5)
+multiplications.grid(column=6, row=5, columnspan=2)
+racine.bind('KeyPress-x', multiplication)
+racine.bind('KeyPress-*', multiplication)
+diviser = tk.Button(racine, text="/", font=("30"), command=lambda: division("/"), padx=25)
 diviser.grid(column=4, row=5, columnspan=2)
-flotant = tk.Button(racine, text="Float", font=("30"), command=nbrFlotant, padx=60)
-flotant.grid(column=0, row=1, columnspan=4)
-effacer = tk.Button(racine, text="Effacer", font=("30"), command=cancel, padx=55)
-effacer.grid(column=4, row=1, columnspan=4)
+racine.bind('KeyPress-/', division)
+flotant = tk.Button(racine, text=".", font=("30"), command=lambda: nbrFlotant("."), padx=23.5)
+flotant.grid(column=2, row=5, columnspan=2)
+racine.bind('KeyPress-,', nbrFlotant)
+effacer = tk.Button(racine, text="Effacer", font=("30"), command=cancel, padx=145)
+effacer.grid(column=1, row=1, columnspan=8)
 
 # mainloop.
 racine.mainloop()
