@@ -1,6 +1,9 @@
 {
-    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Enabled": false,
     "python.linting.enabled": true,
     "python.linting.banditEnabled": false,
-    "python.linting.mypyEnabled": false
+    "python.linting.mypyEnabled": false,
+    "python.pythonPath": "/Users/arnaudgay/opt/miniconda3/bin/python",
+    "python.linting.pylintEnabled": false,
+    "python.linting.prospectorEnabled": true
 }
